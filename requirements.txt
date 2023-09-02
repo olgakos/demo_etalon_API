@@ -1,0 +1,11 @@
+pytest == 7.4.0
+requests == 2.31.0
+
+voluptuous
+pytest-voluptuous
+
+jsonschema
+
+Yaml8
+yamlschema == 0.2.1
+PyYAML == 6.0.1
