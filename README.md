@@ -1,4 +1,5 @@
-# demo_etalon_API
+# Etalon
 
-* URL https://dev0skks.etalongroup.com
-* https://editor.swagger.io/
+* tests_login_api.py
+* tests_login_ui.py
+
