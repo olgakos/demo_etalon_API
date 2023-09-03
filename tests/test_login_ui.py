@@ -12,6 +12,7 @@ def test_login_ui():
     browser.element('.btn-primary').click()
     browser.element('#sidebar').should(have.text('Ундомиэль Арвен null'))
 
+
 def test_login_ui_bad():
     browser.open('/')
     browser.element('.form-login').should(have.text('Авторизация'))
@@ -20,6 +21,7 @@ def test_login_ui_bad():
     browser.element('.btn-primary').click()
     browser.element('.toast').should(have.text('проверьте правильность логина и пароля'))
 
+
 def test_login_ui_bad_username():
     browser.open('/')
     browser.element('.form-login').should(have.text('Авторизация'))
@@ -27,6 +29,7 @@ def test_login_ui_bad_username():
     browser.element('#passInput').type(password)
     browser.element('.btn-primary').click()
     browser.element('#sidebar').should(have.no.text('Фродо Бэггинс'))
+
 
 def test_projects_page_available():
     browser.open('/')

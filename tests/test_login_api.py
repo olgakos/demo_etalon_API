@@ -1,6 +1,6 @@
 import requests
 
-def test_positive_login():
+def test_login_positive():
     data = {
         'email': 'arven_test@etalongroup.com',
         'password': '8Y*m8DthaeSn'
@@ -41,7 +41,7 @@ def test_login_negative_path():
     assert response.status_code == 404, 'Не найден путь: /auth/log'
 
 
-def test_login_negative_datatype():
+def test_login_user_id_datatype():
     data = {
         'email': 'arven_test@etalongroup.com',
         'password': '8Y*m8DthaeSn',
@@ -52,5 +52,4 @@ def test_login_negative_datatype():
         url='https://dev0skks.etalongroup.com/auth/login',
         data = data
     )
-    assert type(response.json()['result']['user_id']) == int, 'Ожидаемый тип данных: int'
-    assert type(response.json()['result']['user_id']) != str
+    assert type(response.json()['result']['user_id']) is int, 'Ожидаемый тип данных: int'
