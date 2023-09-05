@@ -9,7 +9,6 @@ __pycache__/
 *.idea
 
 # Environments
-.env
 .venv*
 env/
 venv*/
