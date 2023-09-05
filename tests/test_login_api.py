@@ -1,9 +1,14 @@
+import os
 import requests
+
+
+login = os.getenv('LOGIN')
+password = os.getenv('PASSWORD')
 
 def test_login_positive():
     data = {
-        'email': 'arven_test@etalongroup.com',
-        'password': '8Y*m8DthaeSn'
+        'email': login,
+        'password': password
     }
     response = requests.post(
         url='https://dev0skks.etalongroup.com/auth/login',
@@ -19,8 +24,8 @@ def test_login_positive():
 
 def test_login_negative_method_put():
     data = {
-        'email': 'arven_test@etalongroup.com',
-        'password': '8Y*m8DthaeSn'
+        'email': login,
+        'password': password
     }
     response = requests.put(
         url='https://dev0skks.etalongroup.com/auth/login',
@@ -31,8 +36,8 @@ def test_login_negative_method_put():
 
 def test_login_negative_path():
     data = {
-        'email': 'arven_test@etalongroup.com',
-        'password': '8Y*m8DthaeSn'
+        'email': login,
+        'password': password
     }
     response = requests.post(
         url='https://dev0skks.etalongroup.com/auth/log',
@@ -43,8 +48,8 @@ def test_login_negative_path():
 
 def test_login_user_id_datatype():
     data = {
-        'email': 'arven_test@etalongroup.com',
-        'password': '8Y*m8DthaeSn',
+        'email': login,
+        'password': password,
         'user_id': 293
 
     }
