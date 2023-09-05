@@ -11,9 +11,6 @@ homepage = HomePage()
 login = os.getenv('LOGIN')
 password = os.getenv('PASSWORD')
 
-
-
-
 def test_login():
     username = 'Ундомиэль Арвен null'
 

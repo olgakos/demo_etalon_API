@@ -1,7 +1,6 @@
 import os
 import requests
 
-
 login = os.getenv('LOGIN')
 password = os.getenv('PASSWORD')
 
